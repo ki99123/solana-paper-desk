@@ -1,0 +1,16 @@
+[Unit]
+Description=Solana memecoin paper desk (simulated fills only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/memedesk
+EnvironmentFile=-/opt/memedesk/.env
+ExecStart=/opt/memedesk/.venv/bin/python -m desk run
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

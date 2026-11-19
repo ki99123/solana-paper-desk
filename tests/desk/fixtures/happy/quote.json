@@ -1,0 +1,9 @@
+{
+  "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "outputMint": "Mint11111111111111111111111111111111",
+  "inAmount": "20000000",
+  "outAmount": "1000000",
+  "minOut": "990000",
+  "platformFeeOut": 0,
+  "swapUsd": "20"
+}

@@ -1,0 +1,10 @@
+{
+  "supply": "1000000000000000",
+  "decimals": 6,
+  "mintAuthoritySet": false,
+  "freezeAuthoritySet": false,
+  "holders": [
+    {"address": "Pool1111111111111111111111111111111111", "amount": "400000000000000"},
+    {"address": "Holder11111111111111111111111111111111", "amount": "50000000000000"}
+  ]
+}

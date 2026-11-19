@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>모의 데스크</title>
+<style>
+  :root {
+    --ink: #14170f;
+    --paper: #efe6d2;
+    --card: #f7f1e4;
+    --line: #2a2e22;
+    --muted: #5c614f;
+    --pass: #1f6b3a;
+    --stop: #8d2f24;
+    --tape: #d7c7a2;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 500px at 10% -10%, #2a331c 0%, transparent 55%),
+      var(--ink);
+    color: var(--paper);
+    font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Times New Roman", serif;
+    letter-spacing: 0.01em;
+  }
+  main { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+  header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+  h1 { font-size: 42px; line-height: 0.95; font-weight: 600; margin: 0; }
+  h1 span { display: block; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px; letter-spacing: 0.18em; color: var(--tape); margin-bottom: 8px; }
+  .badge {
+    border: 1px solid var(--tape);
+    color: var(--tape);
+    padding: 8px 12px;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  .banner {
+    margin-top: 22px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .banner strong { font-size: 18px; }
+  .banner p { margin: 0; max-width: 62ch; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+  .stat { background: #1c2116; border: 1px solid #34392c; padding: 14px 14px 12px; }
+  .stat b { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 28px; font-weight: 600; }
+  .stat small { color: var(--tape); font-family: ui-monospace, Menlo, Consolas, monospace; letter-spacing: 0.08em; }
+  .stat em { display: block; margin-top: 8px; font-style: normal; color: #c9c2b0; font-size: 14px; }
+  .down { color: #e3b2a8; }
+  section { margin-top: 28px; }
+  h2 { font-size: 13px; letter-spacing: 0.16em; font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 500; color: var(--tape); margin: 0 0 10px; }
+  .gates { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .gate { background: var(--card); color: var(--ink); min-height: 92px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; }
+  .gate i { font-style: normal; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.08em; }
+  .gate b { font-size: 18px; }
+  .ok { color: var(--pass); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #34392c; vertical-align: top; }
+  th { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--tape); font-weight: 500; }
+  td.num, th.num { text-align: right; font-family: ui-monospace, Menlo, Consolas, monospace; }
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .rule { border: 1px solid #34392c; padding: 14px 16px; }
+  .rule b { display: block; margin-bottom: 6px; }
+  .rule p { margin: 0; color: #ddd4c2; }
+  footer { margin-top: 28px; color: #b7b09e; font-size: 14px; max-width: 70ch; }
+  @media (max-width: 800px) {
+    h1 { font-size: 34px; }
+    .stats, .gates, .rules { grid-template-columns: 1fr 1fr; }
+    .gates { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .stats, .rules { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span>SOLANA MEME · PAPER ONLY</span>모의 데스크</h1>
+    <div class="badge">지갑 없음 · 서명 없음 · 실주문 없음</div>
+  </header>
+  <div class="banner">
+    <strong>샘플 장부</strong>
+    <p>아래 숫자는 저장된 예시 한 건입니다. 수익을 약속하지 않으며, 실시간 시세가 아닙니다. 실제 루프는 리눅스에서 화면 없이 돌고, 이 화면은 그 규칙을 검토하는 자리입니다.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><small>평가액</small><b>$999.74</b><em>현금 $980.00 · 시작 $1,000</em></div>
+    <div class="stat"><small>총수익률</small><b class="down">-0.03%</b><em>수수료와 슬리피지를 뺀 값</em></div>
+    <div class="stat"><small>단순 보유</small><b class="down">-0.03%</b><em>같은 수량, 같은 평가 시점</em></div>
+    <div class="stat"><small>승률</small><b>없음</b><em>청산 0건 · 최대낙폭 0.03%</em></div>
+  </div>
+
+  <section>
+    <h2>샘플 1회 · 게이트</h2>
+    <div class="gates">
+      <article class="gate"><i>01 SCOUT</i><b class="ok">통과</b><span>발굴</span></article>
+      <article class="gate"><i>02 RUG</i><b class="ok">통과</b><span>권한·위험</span></article>
+      <article class="gate"><i>03 WHALE</i><b class="ok">통과</b><span>공개 지갑</span></article>
+      <article class="gate"><i>04 RISK</i><b class="ok">통과</b><span>거부권</span></article>
+      <article class="gate"><i>05 SNIPER</i><b class="ok">체결</b><span>모의 매수</span></article>
+      <article class="gate"><i>06 EXIT</i><b>대기</b><span>손절·익절</span></article>
+      <article class="gate"><i>07 JOURNAL</i><b class="ok">기록</b><span>사유 저장</span></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>열린 모의 포지션</h2>
+    <table>
+      <thead>
+        <tr><th>심볼</th><th>민트</th><th class="num">수량</th><th class="num">체결가</th><th class="num">비용</th><th>사유</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PAPER</td>
+          <td>Mint1111…1111</td>
+          <td class="num">0.987030</td>
+          <td class="num">$20.2628</td>
+          <td class="num">$20.00</td>
+          <td>견적의 슬리피지와 수수료를 반영한 가격</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>지키는 규칙</h2>
+    <div class="rules">
+      <article class="rule"><b>통과 아니면 매수하지 않음</b><p>점수는 쓰지 않습니다. 데이터가 10초보다 오래됐거나 확인에 실패하면 그 코인은 사지 않습니다.</p></article>
+      <article class="rule"><b>체결가는 견적 그대로</b><p>최소 수령액에서 슬리피지와 수수료를 뺍니다. 한 주문은 풀 유동성의 2% 이하여야 합니다.</p></article>
+      <article class="rule"><b>손절은 실제 체결가</b><p>손절은 -25%입니다. 가격이 손절선 아래로 벌어지면 손절선이 아니라 그 견적 가격을 적습니다.</p></article>
+      <article class="rule"><b>익절은 절반씩</b><p>+50%와 +100%에서 처음 수량의 절반을 팝니다. 시드는 $1,000, 한 번 매수는 $20입니다.</p></article>
+    </div>
+  </section>
+
+  <footer>
+    데이터는 PumpPortal, DexScreener, RugCheck, 솔라나 공개 RPC, Jupiter 견적입니다. 스왑을 만들거나 보내지 않습니다. 매수·거절·청산 사유는 서버의 SQLite 장부에 남고, 이 페이지의 표는 그 장부의 예시입니다.
+  </footer>
+</main>
+</body>
+</html>
